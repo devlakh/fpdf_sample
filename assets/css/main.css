@@ -1,11 +1,37 @@
+*{
+    outline: 1px solid red;
+}
+
 html{
     height: 100%;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 body{
     height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+
+.flex-container{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+}
+
+.flex-container>div{
+    width: 40%;
+    text-align: center;
+}
+
+.links{
+    height: 10%;
+    width: 100%;
     text-align: center;
 }
