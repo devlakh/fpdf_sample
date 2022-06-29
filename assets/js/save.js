@@ -1,14 +1,18 @@
-async function save()
+function save()
 {
-    var response = await fetch('models/save.php', {
+    fetch('models/save.php', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json',},
+        headers: {
+            'Content-Type': "application/json",
+            "Accept":       "text/plain"
+        },
         body: JSON.stringify({coolKey:"value1"}),
-    });
-
-    response = response.json();
-
-    response.then((data)=>{
-        console.log(data);
+    })
+    .then( response => response.json() )
+    .then((data)=>{
+        console.log("Success", data);
+    })
+    .catch((err)=>{
+        console.log("Error", err);
     });
 }
