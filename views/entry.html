@@ -1,0 +1,47 @@
+<div>
+	<hr/>
+		FPDF 
+	<hr/>
+		<a href="?page=landing" class="styled-links">Home</a>
+	<hr/>
+
+	<br/>
+
+	<form onsubmit="save(); return false;" method="post">
+
+		Buyers Name <input name="input1" type="text" />
+
+		<br/>
+		<br/>
+
+		<label for="pet-select">Choose a Weed:</label>
+
+		<select name="pets" id="pet-select">
+			<option value="">--Please choose an option--</option>
+			<option value="1">Cannabis Sativa</option>
+			<option value="2">Marijuana</option>
+			<option value="3">Cannabil Ruderalis</option>
+			<option value="4">White Widow</option>
+			<option value="5">Quebec Gold</option>
+			<option value="6">NYC Diesel</option>
+			<option value="7">Shaman</option>
+			<option value="8">Nederwiet</option>
+		</select>
+
+		<br/>
+		<br/>
+
+		Cost Per Weed <input name="input2" type="text" />
+		
+		<br/>
+		<br/>
+
+		Total Amount <span id="totalAmount">##</span>
+
+		<br/>
+		<br/>
+
+		<button type="submit">Save To Database</button>
+
+	</form>
+</div>

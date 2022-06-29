@@ -1,7 +1,3 @@
-*{
-    outline: 1px solid red;
-}
-
 html{
     height: 100%;
     width: 100%;
@@ -14,24 +10,34 @@ body{
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #171717;
+    color: #EDEDED;
+}
+
+.flex-column{
+    display: flex;
     flex-direction: column;
 }
 
-.flex-container{
-    height: 90%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.flex-container>div{
-    width: 40%;
+body>div{
     text-align: center;
 }
 
-.links{
-    height: 10%;
-    width: 100%;
-    text-align: center;
+.links-list{
+    list-style: none;
 }
+
+.styled-links{
+    text-decoration: none;
+    color: #EDEDED;
+}
+
+.styled-links:hover{
+    text-decoration: none;
+    color: #e03761;
+    outline: 1px solid #e03761;
+}
+
