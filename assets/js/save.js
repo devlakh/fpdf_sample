@@ -1,5 +1,14 @@
-function save()
+async function save()
 {
-    // document.querySelector("#totalPrice").innerText;
-    console.log(document.querySelector("#weedType").value);
+    var response = await fetch('models/save.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json',},
+        body: JSON.stringify({coolKey:"value1"}),
+    });
+
+    response = response.json();
+
+    response.then((data)=>{
+        console.log(data);
+    });
 }

@@ -23,9 +23,5 @@ switch($page)
         render("entries");
         render("templates/foot");
         break;
-
-    case "createPDF":
-        load("createPDF", $_POST);
-        break;
 }
 ?>
