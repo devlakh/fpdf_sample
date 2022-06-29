@@ -1,3 +1,7 @@
+*{
+    outline: 1px solid red;
+}
+
 html{
     height: 100%;
     width: 100%;
@@ -22,7 +26,23 @@ body{
     flex-direction: column;
 }
 
-body>div{
+/* Grid System Start */
+.grid-12{
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    gap: 1vh 0.5vw;
+}
+
+.col-12{
+    grid-column: span 12;
+}
+
+.col-6{
+    grid-column: span 6;
+}
+/* Grid System End */
+
+.text-center{
     text-align: center;
 }
 

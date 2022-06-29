@@ -1,47 +1,64 @@
-<div>
-	<hr/>
-		FPDF 
-	<hr/>
+<div class="grid-12">
+	<div class="col-12 text-center">
+		FPDF
+	</div>
+	<div class="col-12 text-center">
 		<a href="?page=landing" class="styled-links">Home</a>
-	<hr/>
+	</div>
+	<div class="col-12">
+		<form onsubmit="save(); return false;" method="post">
+			<div class="grid-12">
 
-	<br/>
+				<div class="col-6">
+					Customer Name
+				</div>
+				<div class="col-6">
+					<input id="customerName" type="text"/>
+				</div>
 
-	<form onsubmit="save(); return false;" method="post">
+				<div class="col-6">
+					Choose a Weed:
+				</div>
+				<div class="col-6">
+					<select id="weedType" id="pet-select">
+						<option value="">--Please choose an option--</option>
+						<option value="1">Cannabis Sativa</option>
+						<option value="2">Marijuana</option>
+						<option value="3">Cannabil Ruderalis</option>
+						<option value="4">White Widow</option>
+						<option value="5">Quebec Gold</option>
+						<option value="6">NYC Diesel</option>
+						<option value="7">Shaman</option>
+						<option value="8">Nederwiet</option>
+					</select>
+				</div>
 
-		Buyers Name <input name="input1" type="text" />
+				<div class="col-6">
+					Quantity
+				</div>
+				<div class="col-6">
+					<input id="quantity" type="text"/>
+				</div>
 
-		<br/>
-		<br/>
+				<div class="col-6">
+					Unit Price
+				</div>
+				<div class="col-6">
+					<input id="unitPrice" type="text"/>
+				</div>
 
-		<label for="pet-select">Choose a Weed:</label>
+				<div class="col-6">
+					Total Price
+				</div>
+				<div class="col-6">
+					<span id="totalPrice">####</span>
+				</div>
 
-		<select name="pets" id="pet-select">
-			<option value="">--Please choose an option--</option>
-			<option value="1">Cannabis Sativa</option>
-			<option value="2">Marijuana</option>
-			<option value="3">Cannabil Ruderalis</option>
-			<option value="4">White Widow</option>
-			<option value="5">Quebec Gold</option>
-			<option value="6">NYC Diesel</option>
-			<option value="7">Shaman</option>
-			<option value="8">Nederwiet</option>
-		</select>
-
-		<br/>
-		<br/>
-
-		Cost Per Weed <input name="input2" type="text" />
-		
-		<br/>
-		<br/>
-
-		Total Amount <span id="totalAmount">##</span>
-
-		<br/>
-		<br/>
-
-		<button type="submit">Save To Database</button>
-
-	</form>
+				<div class="col-6"></div>
+				<div class="col-6">
+					<button type="submit">Save To Database</button>
+				</div>
+			</div>
+		</form>
+	</div>
 </div>
