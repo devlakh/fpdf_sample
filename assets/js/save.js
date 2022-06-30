@@ -1,18 +1,19 @@
 function save()
 {
+    let formData = new FormData();
+    
+    formData.append('coolKey', 'abc123');
+    
     fetch('models/save.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': "application/json",
-            "Accept":       "text/plain"
-        },
-        body: JSON.stringify({coolKey:"value1"}),
+      method: 'POST',
+      body: formData
     })
-    .then( response => response.json() )
-    .then((data)=>{
-        console.log("Success", data);
+    .then(response => response.json())
+    .then(result => {
+      console.log('Success:', result);
     })
-    .catch((err)=>{
-        console.log("Error", err);
+    .catch(error => {
+      console.error('Error:', error);
     });
+    
 }
