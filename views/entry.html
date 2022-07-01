@@ -6,7 +6,7 @@
 		<a href="?page=landing" class="styled-links">Home</a>
 	</div>
 	<div class="col-12">
-		<form onsubmit="save(); return false;" method="post">
+		<form id="entryForm" method="post">
 			<div class="grid-12">
 
 				<div class="col-6">
@@ -20,16 +20,9 @@
 					Choose a Weed:
 				</div>
 				<div class="col-6">
-					<select id="weedType" id="pet-select">
+					<select id="productList">
 						<option value="">--Please choose an option--</option>
-						<option value="1">Cannabis Sativa</option>
-						<option value="2">Marijuana</option>
-						<option value="3">Cannabis Ruderalis</option>
-						<option value="4">White Widow</option>
-						<option value="5">Quebec Gold</option>
-						<option value="6">NYC Diesel</option>
-						<option value="7">Shaman</option>
-						<option value="8">Nederwiet</option>
+						<!-- NIJAVASCRIPT -->
 					</select>
 				</div>
 
@@ -62,3 +55,5 @@
 		</form>
 	</div>
 </div>
+<script src="assets/js/getProducts.js"></script>
+<script src="assets/js/save.js"></script>
