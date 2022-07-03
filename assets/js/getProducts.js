@@ -1,4 +1,5 @@
-(()=>{
+function getProducts(_formData){
+
 	fetch('models/getProducts.php', {
 		method: 'POST'
 	})
@@ -10,9 +11,11 @@
 			elem.innerText = result.name;
 			elem.onclick = ()=>{
 				console.log(result.id);
+				_formData.append('coolKey', result.id);
 			}
 			document.querySelector("#productList").append(elem);
 		});
 
 	});
-})();
+
+}

@@ -40,4 +40,18 @@ JQuery() or $()
         There is a library that is much more lighter than Mininal JQuery Called
         Cash JS
 
-fetch() API
+🚌 The fetch() API 🚌
+
+    let formData = new FormData();
+	formData.append('key', 'value');
+    fetch('models/entry.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(result => {
+        console.log('From (entry.php) :', result);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
