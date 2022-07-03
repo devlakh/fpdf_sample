@@ -10,8 +10,8 @@
 			body: formData
 		})
 		.then(response => response.json())
-		.then(result => {
-			console.log('From (entry.php) :', result);
+		.then(results => {
+			console.log('From (entry.php) :', results);
 		});
 	
 		return false;

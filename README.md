@@ -1,5 +1,6 @@
-# MVC
-Simple MVC Example
+# +--------------------+
+# | Simple MVC Example |
+# +--------------------+
 
 📺 Content Rendering 📺
 
@@ -44,14 +45,14 @@ JQuery() or $()
 
     let formData = new FormData();
 	formData.append('key', 'value');
-    fetch('models/entry.php', {
+    fetch('models/model.php', {
         method: 'POST',
         body: formData
     })
     .then(response => response.json())
-    .then(result => {
-        console.log('From (entry.php) :', result);
+    .then(results => {
+        console.log('Success:', results);
     })
-    .catch((error) => {
+    .catch(error => {
         console.error('Error:', error);
     });
