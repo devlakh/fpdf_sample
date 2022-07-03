@@ -1,6 +1,4 @@
-# +--------------------+
-# | Simple MVC Example |
-# +--------------------+
+# Simple MVC Example
 
 📺 Content Rendering 📺
 
