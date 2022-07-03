@@ -4,6 +4,6 @@
     print(json_encode(array(
         "key1" => "Hello,", 
         "key2" => "World!",
-        "productId" => isset($_POST["coolKey"]) ? $_POST["coolKey"] : "No Data"
+        "productId" => isset($_POST["productId"]) ? $_POST["productId"] : "No Data"
     )));
 ?>

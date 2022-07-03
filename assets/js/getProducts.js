@@ -12,7 +12,7 @@ function getProducts(_formData)
 
 		elem.onclick = ()=>{
 			elem.innerText = "---Select Option---";
-			_formData.append('coolKey', -1);
+			_formData.delete('productId');
 		}
 		document.querySelector("#productList").append(elem);
 
@@ -23,7 +23,7 @@ function getProducts(_formData)
 
 			elem.onclick = ()=>{
 				elem.innerText = result.name;
-				_formData.append('coolKey', result.id);
+				_formData.append('productId', result.id);
 			}
 
 			document.querySelector("#productList").append(elem);

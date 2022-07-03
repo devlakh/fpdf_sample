@@ -1,7 +1,6 @@
 (()=>{	
 
 	let formData = new FormData();
-	formData.append('coolKey', 'init');
 
 	document.querySelector("#entryForm").onsubmit = ()=>{
 	
