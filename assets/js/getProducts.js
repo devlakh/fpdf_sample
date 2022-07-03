@@ -3,16 +3,16 @@
 		method: 'POST'
 	})
 	.then(response => response.json())
-	.then(result => {
+	.then(results => {
 
-		result.forEach(elem => {
-			document.querySelector("#productList").innerHTML += "<option>"+elem.name+"</option>";
-			console.log(elem.id);
+		results.forEach(result => {
+			let elem = document.createElement("option");
+			elem.innerText = result.name;
+			elem.onclick = ()=>{
+				console.log(result.id);
+			}
+			document.querySelector("#productList").append(elem);
 		});
-		// console.log(result);
+
 	});
 })();
-
-document.querySelector("#productList").onchange = ()=>{
-	
-};
