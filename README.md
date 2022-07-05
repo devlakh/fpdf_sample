@@ -54,3 +54,9 @@ JQuery() or $()
     .catch(error => {
         console.error('Error:', error);
     });
+
+
+⚠ The event for the option element issue ⚠
+
+    adding event handlers on <option> works on firefox
+    but does not work on chromes engine

@@ -4,18 +4,11 @@
 
 	document.querySelector("#entryForm").onsubmit = ()=>{
 	
-		fetch('models/entry.php', {
-			method: 'POST',
-			body: formData
-		})
-		.then(response => response.json())
-		.then(results => {
-			console.log('From (entry.php) :', results);
-		});
+		sendEntry();
 	
 		return false;
   	};
 
-  getProducts(formData);
+  getProducts();
   
 })();
