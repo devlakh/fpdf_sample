@@ -1,10 +1,10 @@
 <?php
-require('assets/fpdf/fpdf.php');
+require('../assets/fpdf/fpdf.php');
 
 $pdf = new FPDF();
 $pdf->AddPage();
 
-$pdf->Image('assets/img/logo.png',12.5,12.5,15);//"",x,y,size
+$pdf->Image('../assets/img/logo.png',12.5,12.5,15);//"",x,y,size
 
 $pdf->SetFont('Arial','B',16);
 $pdf->Cell(20,10,'',"TL",0,'C');//Top Left Border
@@ -31,8 +31,8 @@ $pdf->Cell(190,10,'',1,0,'C');
 $pdf->Ln();
 
 $pdf->SetFont('Arial','',12);
-if(isset($input1)) $pdf->Cell(95,10,$input1,1,0,'C');
-if(isset($input2)) $pdf->Cell(95,10,$input2,1,0,'C');
+if(isset($name)) $pdf->Cell(95,10,$name,1,0,'C');
+if(isset($name)) $pdf->Cell(95,10,$name,1,0,'C');
 
 $pdf->Output();
 ?>

@@ -12,7 +12,7 @@ function getProducts()
 			elem.value = result.id;
 			elem.innerText = result.name;
 
-			document.querySelector("#productList").append(elem);
+			document.querySelector("[data-productList]").append(elem);
 		});
 
 	});

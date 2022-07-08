@@ -6,21 +6,20 @@
 		<a href="?page=landing" class="styled-links">Home</a>
 	</div>
 	<div class="col-12">
-		<form id="entryForm" method="post">
 			<div class="grid-12">
 
 				<div class="col-6">
 					Customer Name
 				</div>
 				<div class="col-6">
-					<input id="customerName" type="text"/>
+					<input data-customerName type="text"/>
 				</div>
 
 				<div class="col-6">
 					Choose a Product
 				</div>
 				<div class="col-6">
-					<select id="productList">
+					<select data-productList required>
 						<option value="">Select Product</option>
 					</select>
 				</div>
@@ -29,29 +28,34 @@
 					Quantity
 				</div>
 				<div class="col-6">
-					<input id="quantity" type="text"/>
+					<input data-quantity type="text" required/>
 				</div>
 
 				<div class="col-6">
 					Unit Price
 				</div>
 				<div class="col-6">
-					<input id="unitPrice" type="text"/>
+					<input data-unitPrice type="text" required/>
 				</div>
 
 				<div class="col-6">
 					Total Price
 				</div>
 				<div class="col-6">
-					<span id="totalPrice">####</span>
+					<span data-totalPrice>####</span>
 				</div>
 
 				<div class="col-6"></div>
 				<div class="col-6">
-					<button type="submit">Save To Database</button>
+					<form data-btnSaveForm method="post">
+						<button type="submit" value="save">Save</button>
+					</form>
+					&nbsp;
+					<form data-btnSaveAndPrintForm method="post">
+						<button type="submit" value="saveAndPrint">Save And Print</button>
+					</form>
 				</div>
 			</div>
-		</form>
 	</div>
 </div>
 <script src="assets/js/getProducts.js"></script>

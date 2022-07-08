@@ -1,1 +1,0 @@
-// document.querySelectorAll("#totalPrice").forEach( element => console.log(element.innerText) );
