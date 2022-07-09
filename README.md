@@ -35,9 +35,21 @@ JQuery() or $()
         - a whole lot shorter with shorten functions too
 
     Additional Info : 
-        JQuery Offers a Minimal Version That Does Not Include Things Like Ajax
+	JQuery Offers a Minimal Version That Does Not Include Things Like Ajax
         There is a library that is much more lighter than Mininal JQuery Called
         Cash JS
+	
+
+* Identifying elements *
+
+class and id vs data-*
+
+	> use class and id for css queries only
+	> use data-* for javascript queries
+	
+	> example for js queries :
+   		<input data-* type="text"/>
+	    document.querySelector("[data-*]");	
 
 🚌 The fetch() API 🚌
 
