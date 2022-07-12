@@ -1,4 +1,16 @@
-(()=>{	
+(()=>{
+
+	getProducts();
+
+	function getTotal(_arg1, _arg2)
+	{
+		document.querySelector("[data-totalPrice]").innerHTML	 = document.querySelector("[data-quantity]").value * document.querySelector("[data-unitPrice]").value;
+		console.log("FUCK");
+	}
+	document.querySelector("[data-quantity]").onclick = getTotal;
+	document.querySelector("[data-quantity]").onkeyup = getTotal;
+	document.querySelector("[data-unitPrice]").onclick = getTotal;
+	document.querySelector("[data-unitPrice]").onkeyup = getTotal;
 
 	function collectForm()
 	{
@@ -20,6 +32,7 @@
   	};
 
 	document.querySelector("[data-btnSaveAndPrintForm]").onsubmit = ()=>{
+		return false;
 		console.log("Save and Print");
 
 		sendEntry(collectForm());
@@ -27,7 +40,5 @@
 		window.location.href = "?page=landing";
 		return false;
   	};
-
-  getProducts();
   
 })();
