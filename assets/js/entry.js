@@ -26,13 +26,16 @@
 	document.querySelector("[data-btnSaveForm]").onsubmit = ()=>{
 		console.log("Save");
 		
+		for (let value of collectForm().values()) {
+			console.log(value);
+		}
 		sendEntry(collectForm());
 		
 		return false;
   	};
 
 	document.querySelector("[data-btnSaveAndPrintForm]").onsubmit = ()=>{
-		return false;
+		return false;//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		console.log("Save and Print");
 
 		sendEntry(collectForm());
