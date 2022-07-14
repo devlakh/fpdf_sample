@@ -4,7 +4,6 @@
     extract($_POST);
 
     $query = $conn->prepare("INSERT INTO entries (customer_name, product_id, quantity, unit_price, total) VALUES (:name, :product, :quantity, :price, :total)");
-    // $query = $conn->prepare("INSERT INTO(customer_name, productId, quantity) VALUES (:name, :product, :quantity)");
 
     $query->bindParam(":name", $name);
     $query->bindParam(":product", $product);

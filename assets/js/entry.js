@@ -5,7 +5,6 @@
 	function getTotal(_arg1, _arg2)
 	{
 		document.querySelector("[data-totalPrice]").innerHTML	 = document.querySelector("[data-quantity]").value * document.querySelector("[data-unitPrice]").value;
-		console.log("FUCK");
 	}
 	document.querySelector("[data-quantity]").onclick = getTotal;
 	document.querySelector("[data-quantity]").onkeyup = getTotal;
@@ -23,24 +22,12 @@
 		return form;
 	}
 
-	document.querySelector("[data-btnSaveForm]").onsubmit = ()=>{
+	document.querySelector("[data-btnFetchSubmit]").onclick = ()=>{
 		console.log("Save");
 		
-		for (let value of collectForm().values()) {
-			console.log(value);
-		}
 		sendEntry(collectForm());
-		
-		return false;
-  	};
-
-	document.querySelector("[data-btnSaveAndPrintForm]").onsubmit = ()=>{
-		return false;//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-		console.log("Save and Print");
-
-		sendEntry(collectForm());
-		
-		window.location.href = "?page=landing";
+		document.querySelector("[data-mainForm]").reset();
+	
 		return false;
   	};
   

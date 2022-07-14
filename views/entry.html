@@ -6,6 +6,10 @@
 		<a href="?page=landing" class="styled-links">Home</a>
 	</div>
 	<div class="col-12">
+		<!-- TODO: Determine on sendEntry.php 
+			wether data is from fetch or from form
+		-->
+		<form data-mainForm action="?page=saveEntry" method="post">
 			<div class="grid-12">
 
 				<div class="col-6">
@@ -19,7 +23,7 @@
 					Choose a Product
 				</div>
 				<div class="col-6">
-					<select data-productList required>
+					<select data-productList >
 						<option value="">Select Product</option>
 					</select>
 				</div>
@@ -28,14 +32,14 @@
 					Quantity
 				</div>
 				<div class="col-6">
-					<input data-quantity type="text" required/>
+					<input data-quantity type="text" />
 				</div>
 
 				<div class="col-6">
 					Unit Price
 				</div>
 				<div class="col-6">
-					<input data-unitPrice type="text" required/>
+					<input data-unitPrice type="text" />
 				</div>
 
 				<div class="col-6">
@@ -44,18 +48,28 @@
 				<div class="col-6">
 					<span data-totalPrice>####</span>
 				</div>
+			</div>
 
-				<div class="col-6"></div>
+			<div class="grid-12">
 				<div class="col-6">
-					<form data-btnSaveForm method="post">
-						<button type="submit" value="save">Save</button>
-					</form>
-					&nbsp;
-					<form data-btnSaveAndPrintForm method="post">
-						<button type="submit" value="saveAndPrint">Save And Print</button>
-					</form>
+					(Form Submission)
+				</div>
+				<div class="col-6">
+					<button type="submit">Save And Print</button>
 				</div>
 			</div>
+
+		</form>
+
+		<div class="grid-12">
+			<div class="col-6">
+				(Fetch Submission)
+			</div>
+			<div class="col-6">
+				<button data-btnFetchSubmit type="button">Save</button>
+			</div>
+		</div>
+
 	</div>
 </div>
 <script src="assets/js/getProducts.js"></script>
