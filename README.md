@@ -68,7 +68,8 @@ class and id vs data-*
     });
 
 ☄ Lambda - Creating and Running a lambda Function ☄
-(()=>{})();
+
+	(()=>{})();
 
 ⚠ The event for the option element issue ⚠
 
