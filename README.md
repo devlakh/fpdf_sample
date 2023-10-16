@@ -67,6 +67,8 @@ class and id vs data-*
         console.error('Error:', error);
     });
 
+☄ Lambda - Creating and Running a lambda Function ☄
+(()=>{})();
 
 ⚠ The event for the option element issue ⚠
 
