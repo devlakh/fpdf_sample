@@ -54,10 +54,28 @@ class and id vs data-*
 🚌 The fetch() API 🚌
 
     let formData = new FormData();
-	formData.append('key', 'value');
+    formData.append('key', 'value');
     fetch('models/model.php', {
         method: 'POST',
         body: formData
+    })
+    .then(response => response.json())
+    .then(results => {
+        console.log('Success:', results);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+
+☢ The fetch() API For LARAVEL ☢
+
+    let formData = new FormData();
+    formData.append("somekey","somevalue");
+    fetch("{{ route('work.store') }}", {
+        method: 'POST',
+        body: formData,
+        headers: { 'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value, 'Content-Type': 'application/json' }
     })
     .then(response => response.json())
     .then(results => {
